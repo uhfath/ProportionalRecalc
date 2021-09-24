@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31702.278
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProportionalRecalc", "ProportionalRecalc\ProportionalRecalc.csproj", "{2EF58217-115D-45E7-8546-E31698AB05AA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProportionalRecalc", "ProportionalRecalc\ProportionalRecalc.csproj", "{2EF58217-115D-45E7-8546-E31698AB05AA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

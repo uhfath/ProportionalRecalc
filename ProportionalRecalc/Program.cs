@@ -20,6 +20,7 @@ namespace ProportionalRecalc
 
 			builder.Services
 				.AddScoped<ClipboardService>()
+				.AddSingleton<CalculationService>()
 			;
 
 			return builder.Build().RunAsync();

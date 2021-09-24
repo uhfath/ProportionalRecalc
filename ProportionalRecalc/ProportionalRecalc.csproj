@@ -24,4 +24,8 @@
     <None Include="wwwroot\lib\bootstrap\js\bootstrap.js.map" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Entities\" />
+  </ItemGroup>
+
 </Project>

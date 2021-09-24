@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Components;
 using ProportionalRecalc.Services;
+using ProportionalRecalc.Services.Calculation;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,28 +10,25 @@ namespace ProportionalRecalc.Pages
 {
 	public partial class Index : ComponentBase
 	{
-		private int columns;
-
 		[Inject]
 		public ClipboardService ClipboardService { get; set; }
 
+		[Inject]
+		public CalculationService CalculationService { get; set; }
+
 		private void AddNewCalculation()
 		{
-			throw new NotImplementedException();
+			CalculationService.AddCalculation();
 		}
 
-		private void AddNewColumn()
+		private void OnRowInsert(CalculationData calculationData, int index)
 		{
-			++columns;
+			calculationData.Source.Insert(index, null);
 		}
 
-		private void DeleteColumn()
+		private void OnRowRemove(CalculationData calculationData, int index)
 		{
-			--columns;
-		}
-
-		protected override void OnInitialized()
-		{
+			calculationData.Source.RemoveAt(index);
 		}
 	}
 }
