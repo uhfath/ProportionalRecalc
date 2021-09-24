@@ -12,6 +12,9 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
 
+    - name: Fix 404
+      run: cp ProportionalRecalc/wwwroot/index.html ProportionalRecalc/wwwroot/404.html
+
     - name: Setup SDK
       uses: actions/setup-dotnet@v1
       with:
