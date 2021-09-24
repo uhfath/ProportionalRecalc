@@ -1,7 +1,7 @@
 ﻿self.assetsManifest = {
   "assets": [
     {
-      "hash": "sha256-pIZSk678lw8LT8y4ixYl+Pf8hvIQznZAcIk0noG3ToU=",
+      "hash": "sha256-dVxUPDCHdniePa91qoBSB\/z0lcrHwke7WnFdcz\/6zCs=",
       "url": "404.html"
     },
     {
@@ -65,7 +65,7 @@
       "url": "favicon.ico"
     },
     {
-      "hash": "sha256-pIZSk678lw8LT8y4ixYl+Pf8hvIQznZAcIk0noG3ToU=",
+      "hash": "sha256-dVxUPDCHdniePa91qoBSB\/z0lcrHwke7WnFdcz\/6zCs=",
       "url": "index.html"
     },
     {
@@ -361,7 +361,7 @@
       "url": "_framework\/System.IO.Pipelines.dll"
     },
     {
-      "hash": "sha256-7X+WvosbxMLoEA9dt3KLk1CZQxjNDw1qREFEEOqcSdk=",
+      "hash": "sha256-yh09cjFQRYbSsFBnChiZozQKrvSAhGhgExPC4u6dDZo=",
       "url": "_framework\/ProportionalRecalc.dll"
     },
     {
@@ -425,7 +425,7 @@
       "url": "_framework\/System.Private.CoreLib.dll"
     },
     {
-      "hash": "sha256-ZAsWw2xZu03clLz0qcEg5BZMxwdUL9PhSLTJkbFuZz0=",
+      "hash": "sha256-QZsNsi7jDX03d39CQFp1eTuCEgl9ibQNxuU3B3bSkDw=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -433,5 +433,5 @@
       "url": "_framework\/blazor.webassembly.js"
     }
   ],
-  "version": "AbK9WZfW"
+  "version": "uNpnvOfC"
 };

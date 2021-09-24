@@ -28,6 +28,15 @@
 </head>
 
 <body>
+    <script>
+        let newBase = window.location.pathname;
+		newBase = (newBase.startsWith('/') ? '' : '/') + newBase;
+		newBase += (newBase.endsWith('/') ? '' : '/');
+
+        document.getElementsByTagName('base').href = newBase;
+		console.debug(`Base href set to "${newBase}"`);
+    </script>
+
     <app id="app">
         <div class="app-loader-container">
             <div class="app-loader"></div>
