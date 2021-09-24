@@ -33,6 +33,7 @@ body {
     #blazor-error-ui .reload {
         color: rgba(255, 255, 255, 0.75);
         text-decoration: none;
+        padding-right: 1rem;
     }
 
     #blazor-error-ui .dismiss {
@@ -47,7 +48,7 @@ body {
 
     #blazor-error-ui .description {
         color: #fff;
-        margin: 1rem;
+        padding-right: 1rem;
     }
 
 #app {

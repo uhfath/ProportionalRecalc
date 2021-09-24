@@ -9,8 +9,25 @@ namespace ProportionalRecalc.Pages
 {
 	public partial class Index : ComponentBase
 	{
+		private int columns;
+
 		[Inject]
 		public ClipboardService ClipboardService { get; set; }
+
+		private void AddNewCalculation()
+		{
+			throw new NotImplementedException();
+		}
+
+		private void AddNewColumn()
+		{
+			++columns;
+		}
+
+		private void DeleteColumn()
+		{
+			--columns;
+		}
 
 		protected override void OnInitialized()
 		{
