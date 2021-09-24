@@ -1,7 +1,7 @@
 ﻿self.assetsManifest = {
   "assets": [
     {
-      "hash": "sha256-8MuXOEhgHijLRwuIoy2lyS3Ks9hw7oIDnYJGWyIxGyw=",
+      "hash": "sha256-4o5MLu5k2oXfxMqj9m\/y8c9fRCfEYT\/Wg111dSov0Qo=",
       "url": "404.html"
     },
     {
@@ -65,7 +65,7 @@
       "url": "favicon.ico"
     },
     {
-      "hash": "sha256-8MuXOEhgHijLRwuIoy2lyS3Ks9hw7oIDnYJGWyIxGyw=",
+      "hash": "sha256-4o5MLu5k2oXfxMqj9m\/y8c9fRCfEYT\/Wg111dSov0Qo=",
       "url": "index.html"
     },
     {
@@ -269,7 +269,7 @@
       "url": "safari-pinned-tab.svg"
     },
     {
-      "hash": "sha256-vcF0jjayS9UReoNarFaFYhYAM2aOc1WqJpNCTL4RCR0=",
+      "hash": "sha256-y9p\/mIHQAed5BLlEPLyXqje5+QZhE5nwXjicne81HQA=",
       "url": "site.webmanifest"
     },
     {
@@ -361,7 +361,7 @@
       "url": "_framework\/System.IO.Pipelines.dll"
     },
     {
-      "hash": "sha256-yh09cjFQRYbSsFBnChiZozQKrvSAhGhgExPC4u6dDZo=",
+      "hash": "sha256-W84nUdUn+Yzp\/HrwRyEuhhhjIs4Di5e7ewkp4tjPrPA=",
       "url": "_framework\/ProportionalRecalc.dll"
     },
     {
@@ -425,7 +425,7 @@
       "url": "_framework\/System.Private.CoreLib.dll"
     },
     {
-      "hash": "sha256-QZsNsi7jDX03d39CQFp1eTuCEgl9ibQNxuU3B3bSkDw=",
+      "hash": "sha256-Zji58rERfIFHNkppzcJXiDXA2ofi34+5O8vxX38Krzg=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -433,5 +433,5 @@
       "url": "_framework\/blazor.webassembly.js"
     }
   ],
-  "version": "LSm1RbJh"
+  "version": "BDw6kskn"
 };
