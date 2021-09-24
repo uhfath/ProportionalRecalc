@@ -1,6 +1,6 @@
 {
     "name": "ProportionalRecalc",
-    "short_name": "ProportionalRecalc",
+    "short_name": "Пропорциональный перерасчёт",
     "start_url": "./",
     "display": "standalone",
     "background_color": "#eceff1",
