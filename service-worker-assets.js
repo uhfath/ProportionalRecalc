@@ -357,7 +357,7 @@
       "url": "_framework\/System.IO.Pipelines.dll"
     },
     {
-      "hash": "sha256-W84nUdUn+Yzp\/HrwRyEuhhhjIs4Di5e7ewkp4tjPrPA=",
+      "hash": "sha256-7X+WvosbxMLoEA9dt3KLk1CZQxjNDw1qREFEEOqcSdk=",
       "url": "_framework\/ProportionalRecalc.dll"
     },
     {
@@ -421,7 +421,7 @@
       "url": "_framework\/System.Private.CoreLib.dll"
     },
     {
-      "hash": "sha256-Zji58rERfIFHNkppzcJXiDXA2ofi34+5O8vxX38Krzg=",
+      "hash": "sha256-ZAsWw2xZu03clLz0qcEg5BZMxwdUL9PhSLTJkbFuZz0=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -429,5 +429,5 @@
       "url": "_framework\/blazor.webassembly.js"
     }
   ],
-  "version": "OO4zCuRF"
+  "version": "gyG8+7j3"
 };
