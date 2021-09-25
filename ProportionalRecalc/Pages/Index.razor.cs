@@ -18,7 +18,7 @@ namespace ProportionalRecalc.Pages
 
 		private void AddNewCalculation()
 		{
-			CalculationService.AddCalculationDestination(CalculationService.AddCalculation());
+			CalculationService.AddCalculationDestination(CalculationService.AddCalculation(), 0);
 		}
 
 		private void RemoveCalculation(CalculationData calculationData)
@@ -36,14 +36,14 @@ namespace ProportionalRecalc.Pages
 			calculationData.Source.RemoveAt(index);
 		}
 
-		private void AddColumn(CalculationData calculationData)
+		private void AddColumn(CalculationData calculationData, int index)
 		{
-			CalculationService.AddCalculationDestination(calculationData);
+			CalculationService.AddCalculationDestination(calculationData, index + 1);
 		}
 
-		private void RemoveColumn(CalculationData calculationData, CalculationDestinationData destinationData)
+		private void RemoveColumn(CalculationData calculationData, int index)
 		{
-			CalculationService.RemoveCalculationDestinationData(calculationData, destinationData);
+			CalculationService.RemoveCalculationDestinationData(calculationData, index);
 		}
 	}
 }

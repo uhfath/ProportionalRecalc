@@ -13,10 +13,10 @@ namespace ProportionalRecalc.Shared
 		public CalculationData Calculation { get; set; }
 
 		[Parameter]
-		public EventCallback OnColumnAdd { get; set; }
+		public EventCallback<int> OnColumnAdd { get; set; }
 
 		[Parameter]
-		public EventCallback OnColumnDelete { get; set; }
+		public EventCallback<int> OnColumnRemove { get; set; }
 
 		[Parameter]
 		public EventCallback<int> OnRowInsert { get; set; }

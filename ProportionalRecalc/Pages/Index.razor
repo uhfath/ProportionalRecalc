@@ -8,7 +8,7 @@
 
 <div class="row pb-4">
 	<div class="col">
-		<button class="btn btn-primary" @onclick="AddNewCalculation">Добавить новый расчёт</button>
+		<button class="btn btn-primary" @onclick="AddNewCalculation" tabindex="-1">Добавить новый расчёт</button>
 	</div>
 </div>
 
@@ -29,7 +29,8 @@
 		<div class="col-auto">
 			<CalculationNode Calculation="calculation"
 							 OnCalculationDelete="() => RemoveCalculation(calculation)"
-							 OnColumnAdd="() => AddColumn(calculation)"
+							 OnColumnAdd="index => AddColumn(calculation, index)"
+							 OnColumnRemove="index => RemoveColumn(calculation, index)"
 							 OnRowInsert="index => OnRowInsert(calculation, index)"
 							 OnRowRemove="index => OnRowRemove(calculation, index)" />
 		</div>

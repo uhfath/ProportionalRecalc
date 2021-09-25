@@ -4,31 +4,33 @@
 	<thead class="table-light">
 		<tr>
 			<th scope="col" colspan="2" class="align-bottom">
-				<button class="btn btn-sm btn-danger w-100" @onclick="OnCalculationDelete" title="Удалить расчёт">Удалить</button>
+				<button class="btn btn-sm btn-danger w-100" @onclick="OnCalculationDelete" title="Удалить расчёт" tabindex="-1">Удалить</button>
 			</th>
 			<th scope="col" class="align-top">
 				<div class="d-flex align-items-baseline">
 					<span>Исходные данные</span>
-					<button type="button" class="btn btn-link btn-sm" title="Вставить значения из буфера обмена"><i class="bi bi-clipboard-data"></i></button>
+					<button type="button" class="btn btn-link btn-sm" title="Вставить значения из буфера обмена" tabindex="-1"><i class="bi bi-clipboard-data"></i></button>
 				</div>
 				<InputDecimal IsReadOnly="true" placeholder="Исходная сумма..." Value="Calculation.SourceSum" />
 			</th>
 
 			@for (var i = 0; i < Calculation.Destinations.Count; i++)
 			{
+				var currentIndex = i;
 				<th scope="col" class="align-top">
 					<div class="d-flex align-items-baseline">
 						<span>Результат@(Calculation.Destinations.Count == 1 ? "" : $" №{i + 1}")</span>
-						<button type="button" class="btn btn-link btn-sm" title="Скопировать новые результаты в буфер обмена"><i class="bi bi-files"></i></button>
-						<button type="button" @onclick="OnColumnDelete" class="btn btn-link link-danger btn-sm ms-auto" title="Удалить столбец"><i class="bi bi-trash-fill"></i></button>
+						<button type="button" class="btn btn-link btn-sm" title="Скопировать новые результаты в буфер обмена" tabindex="-1"><i class="bi bi-files"></i></button>
+						<button type="button" @onclick="() => OnColumnAdd.InvokeAsync(currentIndex)" class="btn btn-link link-success btn-sm ms-auto" title="Добавить новый столбец" tabindex="-1"><i class="bi bi-plus-lg"></i></button>
+
+						@if (Calculation.Destinations.Count > 1)
+						{
+							<button type="button" @onclick="() => OnColumnRemove.InvokeAsync(currentIndex)" class="btn btn-link link-danger btn-sm" title="Удалить столбец" tabindex="-1"><i class="bi bi-trash-fill"></i></button>
+						}
 					</div>
 					<InputDecimal placeholder="Новая сумма..." Value="Calculation.Destinations[i].TargetSum" />
 				</th>
 			}
-
-			<th scope="col" class="align-bottom">
-				<button type="button" @onclick="OnColumnAdd" class="btn btn-outline-secondary btn-sm" title="Добавить новый столбец"><i class="bi bi-plus-lg"></i></button>
-			</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -62,8 +64,6 @@
 										placeholder="Новое значение..." />
 					</td>
 				}
-
-				<td></td>
 			</tr>
 		}
 	</tbody>

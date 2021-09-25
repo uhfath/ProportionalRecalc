@@ -1,6 +1,7 @@
 ﻿using ProportionalRecalc.Services.Calculation;
 using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -15,6 +16,25 @@ namespace ProportionalRecalc.Services
 			var calculation = Calculations
 				.Single(c => c.Source == sender);
 
+			switch (e.Action)
+			{
+				case NotifyCollectionChangedAction.Add:
+					foreach (var destination in calculation.Destinations)
+					{
+						destination.Values.Insert(e.NewStartingIndex, null);
+					}
+
+					break;
+
+				case NotifyCollectionChangedAction.Remove:
+					foreach (var destination in calculation.Destinations)
+					{
+						destination.Values.RemoveAt(e.OldStartingIndex);
+					}
+
+					break;
+			}
+
 			var values = calculation.Source
 				.Where(s => s.HasValue);
 
@@ -25,7 +45,7 @@ namespace ProportionalRecalc.Services
 
 		public CalculationService()
 		{
-			AddCalculationDestination(AddCalculation());
+			AddCalculationDestination(AddCalculation(), 0);
 		}
 
 		public CalculationData AddCalculation()
@@ -49,7 +69,7 @@ namespace ProportionalRecalc.Services
 			Calculations.Remove(calculationData);
 		}
 
-		public CalculationDestinationData AddCalculationDestination(CalculationData calculationData)
+		public CalculationDestinationData AddCalculationDestination(CalculationData calculationData, int index)
 		{
 			var destinationData = new CalculationDestinationData();
 
@@ -59,13 +79,13 @@ namespace ProportionalRecalc.Services
 				destinationData.Values.Add(source);
 			}
 
-			calculationData.Destinations.Add(destinationData);
+			calculationData.Destinations.Insert(index, destinationData);
 			return destinationData;
 		}
 
-		public void RemoveCalculationDestinationData(CalculationData calculationData, CalculationDestinationData destinationData)
+		public void RemoveCalculationDestinationData(CalculationData calculationData, int index)
 		{
-			calculationData.Destinations.Remove(destinationData);
+			calculationData.Destinations.RemoveAt(index);
 		}
 	}
 }
