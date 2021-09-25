@@ -30,6 +30,7 @@ namespace ProportionalRecalc.Shared
 		private void OnCellChanged(int index, decimal? value)
 		{
 			Calculation.Source[index] = value;
+			StateHasChanged();
 		}
 	}
 }

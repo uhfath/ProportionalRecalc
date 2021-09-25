@@ -14,6 +14,20 @@ namespace ProportionalRecalc.Services
 
 		private void Source_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
 		{
+			var calculation = calculationDatas
+				.Single(c => c.Source == sender);
+
+			var values = calculation.Source
+				.Where(s => s.HasValue);
+
+			calculation.SourceSum = values.Any()
+				? values.Sum(s => s.Value)
+				: null;
+		}
+
+		public CalculationService()
+		{
+			AddCalculation();
 		}
 
 		public CalculationData AddCalculation()

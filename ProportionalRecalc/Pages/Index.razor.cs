@@ -21,9 +21,14 @@ namespace ProportionalRecalc.Pages
 			CalculationService.AddCalculation();
 		}
 
+		private void RemoveCalculation(CalculationData calculationData)
+		{
+			CalculationService.RemoveCalculation(calculationData);
+		}
+
 		private void OnRowInsert(CalculationData calculationData, int index)
 		{
-			calculationData.Source.Insert(index, null);
+			calculationData.Source.Insert(index + 1, null);
 		}
 
 		private void OnRowRemove(CalculationData calculationData, int index)

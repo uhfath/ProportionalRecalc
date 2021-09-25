@@ -14,5 +14,8 @@
 
 @foreach (var calculation in CalculationService.Calculations)
 {
-	<CalculationNode Calculation="calculation" OnRowInsert="index => OnRowInsert(calculation, index)" OnRowRemove="index => OnRowRemove(calculation, index)" />
+	<CalculationNode Calculation="calculation"
+					 OnCalculationDelete="() => RemoveCalculation(calculation)"
+					 OnRowInsert="index => OnRowInsert(calculation, index)"
+					 OnRowRemove="index => OnRowRemove(calculation, index)" />
 }

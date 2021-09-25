@@ -1,6 +1,15 @@
 ﻿@inherits ComponentBase
 
-<input @attributes="AdditionalAttributes"
-	   type="number"
-	   value="@Value"
-	   @oninput="OnInput" />
+<div class="input-group-button-container">
+	<input @attributes="AdditionalAttributes"
+		   value="@ValueText"
+		   class="form-control form-control-sm input-group-button-input"
+		   readonly="@IsReadOnly"
+		   @onkeyup="OnKeyUp"
+		   @oninput="OnInput" />
+
+	@if (!string.IsNullOrWhiteSpace(ValueText) && !IsReadOnly)
+	{
+		<button class="btn btn-sm btn-secondary input-group-button-hover input-group-button" @onclick="OnClear" tabindex="-1"><i class="bi bi-x-lg"></i></button>
+	}
+</div>

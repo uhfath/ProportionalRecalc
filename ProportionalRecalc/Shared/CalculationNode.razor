@@ -13,7 +13,7 @@
 							<span>Исходные данные</span>
 							<button type="button" class="btn btn-link btn-sm" title="Вставить значения из буфера обмена"><i class="bi bi-clipboard-data"></i></button>
 						</div>
-						<InputDecimal readonly placeholder="Исходная сумма..." Value="Calculation.SourceSum" />
+						<InputDecimal IsReadOnly="true" placeholder="Исходная сумма..." Value="Calculation.SourceSum" />
 					</th>
 
 					<th scope="col" class="align-bottom">
@@ -27,15 +27,21 @@
 					var currentIndex = i;
 					<tr>
 						<td scope="row" class="align-middle">
-							<button class="cell-hover btn btn-sm btn-link link-success" @onclick="() => OnRowInsert.InvokeAsync(currentIndex)" title="Добавить строку"><i class="bi bi-plus-lg"></i></button>
+							<button class="cell-hover btn btn-sm btn-link link-success" @onclick="() => OnRowInsert.InvokeAsync(currentIndex)" title="Добавить строку" tabindex="-1"><i class="bi bi-plus-lg"></i></button>
 
-							@if (i > 0)
+							@if (Calculation.Source.Count > 1)
 							{
-								<button class="cell-hover btn btn-sm btn-link link-danger" @onclick="() => OnRowRemove.InvokeAsync(currentIndex)" title="Удалить строку"><i class="bi bi-trash-fill"></i></button>
+								<button class="cell-hover btn btn-sm btn-link link-danger" @onclick="() => OnRowRemove.InvokeAsync(currentIndex)" title="Удалить строку" tabindex="-1"><i class="bi bi-trash-fill"></i></button>
 							}
 						</td>
 						<td scope="row" class="align-middle">@(i + 1)</td>
-						<td scope="row" class="align-middle"><InputDecimal Value="Calculation.Source[i]" OnChanged="e => OnCellChanged(currentIndex, e)" placeholder="Исходное значение..." /></td>
+						<td scope="row" class="align-middle">
+							<InputDecimal
+										  Value="Calculation.Source[i]"
+										  OnChanged="e => OnCellChanged(currentIndex, e)"
+										  OnRowInsertShortcut="() => OnRowInsert.InvokeAsync(currentIndex)"
+										  placeholder="Исходное значение..." />
+						</td>
 
 						<td></td>
 					</tr>
