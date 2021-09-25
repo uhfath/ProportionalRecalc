@@ -26,14 +26,14 @@
 	var calculation = CalculationService.Calculations[i];
 
 	<div class="row pb-2">
-		<div class="col-auto">
+		<div class="col-auto overflow-auto">
 			<CalculationNode Calculation="calculation"
-							 OnCalculationDelete="() => RemoveCalculation(calculation)"
-							 OnDestinationRecalculate="index => RecalculateDestination(calculation, index)"
-							 OnColumnAdd="index => AddColumn(calculation, index)"
-							 OnColumnRemove="index => RemoveColumn(calculation, index)"
-							 OnRowInsert="index => OnRowInsert(calculation, index)"
-							 OnRowRemove="index => OnRowRemove(calculation, index)" />
+								OnCalculationDelete="() => RemoveCalculation(calculation)"
+								OnDestinationRecalculate="index => RecalculateDestination(calculation, index)"
+								OnColumnAdd="index => AddColumn(calculation, index)"
+								OnColumnRemove="index => RemoveColumn(calculation, index)"
+								OnRowInsert="index => OnRowInsert(calculation, index)"
+								OnRowRemove="index => OnRowRemove(calculation, index)" />
 		</div>
 	</div>
 }

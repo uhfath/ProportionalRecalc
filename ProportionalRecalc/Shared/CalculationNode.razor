@@ -39,12 +39,14 @@
 			var currentIndex = i;
 			<tr>
 				<td scope="row" class="align-middle">
-					<button class="cell-hover btn btn-sm btn-link link-success" @onclick="() => OnRowInsert.InvokeAsync(currentIndex)" title="Добавить строку" tabindex="-1"><i class="bi bi-plus-lg"></i></button>
+					<div class="d-flex">
+						<button class="cell-hover btn btn-sm btn-link link-success" @onclick="() => OnRowInsert.InvokeAsync(currentIndex)" title="Добавить строку" tabindex="-1"><i class="bi bi-plus-lg"></i></button>
 
-					@if (Calculation.Source.Count > 1)
-					{
-						<button class="cell-hover btn btn-sm btn-link link-danger" @onclick="() => OnRowRemove.InvokeAsync(currentIndex)" title="Удалить строку" tabindex="-1"><i class="bi bi-trash-fill"></i></button>
-					}
+						@if (Calculation.Source.Count > 1)
+						{
+							<button class="cell-hover btn btn-sm btn-link link-danger" @onclick="() => OnRowRemove.InvokeAsync(currentIndex)" title="Удалить строку" tabindex="-1"><i class="bi bi-trash-fill"></i></button>
+						}
+					</div>
 				</td>
 				<td scope="row" class="align-middle">@(i + 1)</td>
 				<td scope="row" class="align-middle">
