@@ -12,11 +12,26 @@
 	</div>
 </div>
 
-@foreach (var calculation in CalculationService.Calculations)
+@for (var i = 0; i < CalculationService.Calculations.Count; i++)
 {
-	<CalculationNode Calculation="calculation"
-					 OnCalculationDelete="() => RemoveCalculation(calculation)"
-					 OnColumnAdd="() => AddColumn(calculation)"
-					 OnRowInsert="index => OnRowInsert(calculation, index)"
-					 OnRowRemove="index => OnRowRemove(calculation, index)" />
+	if (CalculationService.Calculations.Count > 1)
+	{
+		<div class="row pb-1">
+			<div class="col-auto">
+				<span class="text-secondary">Расчёт №@(i + 1)</span>
+			</div>
+		</div>
+	}
+
+	var calculation = CalculationService.Calculations[i];
+
+	<div class="row pb-2">
+		<div class="col-auto">
+			<CalculationNode Calculation="calculation"
+							 OnCalculationDelete="() => RemoveCalculation(calculation)"
+							 OnColumnAdd="() => AddColumn(calculation)"
+							 OnRowInsert="index => OnRowInsert(calculation, index)"
+							 OnRowRemove="index => OnRowRemove(calculation, index)" />
+		</div>
+	</div>
 }

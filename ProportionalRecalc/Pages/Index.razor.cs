@@ -18,7 +18,7 @@ namespace ProportionalRecalc.Pages
 
 		private void AddNewCalculation()
 		{
-			CalculationService.AddCalculation();
+			CalculationService.AddCalculationDestination(CalculationService.AddCalculation());
 		}
 
 		private void RemoveCalculation(CalculationData calculationData)

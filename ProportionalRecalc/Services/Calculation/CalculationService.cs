@@ -8,13 +8,11 @@ namespace ProportionalRecalc.Services
 {
 	public class CalculationService
 	{
-		private ICollection<CalculationData> calculationDatas = new List<CalculationData>();
-
-		public IEnumerable<CalculationData> Calculations { get => calculationDatas; }
+		public IList<CalculationData> Calculations { get; } = new List<CalculationData>();
 
 		private void Source_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
 		{
-			var calculation = calculationDatas
+			var calculation = Calculations
 				.Single(c => c.Source == sender);
 
 			var values = calculation.Source
@@ -27,7 +25,7 @@ namespace ProportionalRecalc.Services
 
 		public CalculationService()
 		{
-			AddCalculation();
+			AddCalculationDestination(AddCalculation());
 		}
 
 		public CalculationData AddCalculation()
@@ -41,14 +39,14 @@ namespace ProportionalRecalc.Services
 
 			data.Source.CollectionChanged += Source_CollectionChanged;
 
-			calculationDatas.Add(data);
+			Calculations.Add(data);
 			return data;
 		}
 
 		public void RemoveCalculation(CalculationData calculationData)
 		{
 			calculationData.Source.CollectionChanged -= Source_CollectionChanged;
-			calculationDatas.Remove(calculationData);
+			Calculations.Remove(calculationData);
 		}
 
 		public CalculationDestinationData AddCalculationDestination(CalculationData calculationData)
