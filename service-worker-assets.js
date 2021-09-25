@@ -41,7 +41,7 @@
       "url": "android-chrome-96x96.png"
     },
     {
-      "hash": "sha256-hfMg0oSoP\/cmmH8Wi3C432x4Admg9nOK4nzFwTZOAxM=",
+      "hash": "sha256-QT\/WdCyWB695vphfgfxqYXK+DLchMCnkkSZyMstXyIU=",
       "url": "app.css"
     },
     {
@@ -169,7 +169,7 @@
       "url": "_framework\/Microsoft.Extensions.DependencyInjection.dll"
     },
     {
-      "hash": "sha256-z6YEUVoT7Cfb60KaVheZ1\/4tE46POxuJ\/tWMwGFi0AU=",
+      "hash": "sha256-mVIJqK0Of4OLQZiEnyRy+oWzMK6sPUI8kAJVtsMm16s=",
       "url": "_framework\/Microsoft.Extensions.DependencyInjection.Abstractions.dll"
     },
     {
@@ -201,7 +201,7 @@
       "url": "_framework\/System.IO.Pipelines.dll"
     },
     {
-      "hash": "sha256-G32EixIlfo0k5vhwM8oYBzS+aOQx7D+iqW\/heH4MrMA=",
+      "hash": "sha256-O00aj6KFSWz3ZCjRhpdVHxheAke0AtnTt4FXYRxfdJo=",
       "url": "_framework\/ProportionalRecalc.dll"
     },
     {
@@ -225,7 +225,7 @@
       "url": "_framework\/System.Console.dll"
     },
     {
-      "hash": "sha256-fZEYzcnRQfm\/WOEHPXWtw2LL77CLZVhGWNqoRhDA6H4=",
+      "hash": "sha256-C\/E1uz9qQ3zaA+xsDDWnnQqqn3N9GagG3MMXROMPdwE=",
       "url": "_framework\/System.Linq.dll"
     },
     {
@@ -233,7 +233,7 @@
       "url": "_framework\/System.Memory.dll"
     },
     {
-      "hash": "sha256-2Fytb+T5IeaUfTsU2rTIbQI5REZAmKAKEBCoaZW\/3gE=",
+      "hash": "sha256-eqnUxbb4RZi2VX7JOdqp5Je7uH9IDYQQYFG4eRG\/4SQ=",
       "url": "_framework\/System.ObjectModel.dll"
     },
     {
@@ -261,11 +261,11 @@
       "url": "_framework\/System.Text.Json.dll"
     },
     {
-      "hash": "sha256-YkQvQlVt2ZJKMhaxoA6ataLHSuiZzqfdRa7FsHiPMjI=",
+      "hash": "sha256-F9PhSwrUVGyLPIDrV22FxcKTe4EnjtWr0UxF+OTXwsU=",
       "url": "_framework\/System.Private.CoreLib.dll"
     },
     {
-      "hash": "sha256-bG\/r9K1z2hhM2iqw9lCJ+t2LVGEm9Q70qnHUkPFrkBE=",
+      "hash": "sha256-7WjFth1iCHjpcAC0+1tZOlKH417TacZV8JpO5Q5OrqM=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -273,5 +273,5 @@
       "url": "_framework\/blazor.webassembly.js"
     }
   ],
-  "version": "f0Bs0wrb"
+  "version": "n6H2tNeB"
 };

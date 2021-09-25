@@ -124,3 +124,30 @@ body {
 tr:hover .cell-hover {
     visibility: visible;
 }
+
+.input-group-button-container {
+    position: relative;
+}
+
+.input-group-button-input {
+    width: 100%;
+    padding-right: 100px !important;
+    box-sizing: border-box;
+}
+
+.input-group-button {
+    position: absolute;
+    right: 3px;
+    top: 3px;
+    bottom: 3px;
+    line-height: 1 !important;
+    z-index: 4;
+}
+
+.input-group-button-hover {
+    visibility: hidden;
+}
+
+div.input-group-button-container:hover .input-group-button-hover {
+    visibility: visible;
+}
