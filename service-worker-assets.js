@@ -41,7 +41,7 @@
       "url": "android-chrome-96x96.png"
     },
     {
-      "hash": "sha256-QT\/WdCyWB695vphfgfxqYXK+DLchMCnkkSZyMstXyIU=",
+      "hash": "sha256-raaZcIMNkdkz+SGMxyQ3pRjMWhxEW6QGi6trYzzaU\/g=",
       "url": "app.css"
     },
     {
@@ -201,7 +201,7 @@
       "url": "_framework\/System.IO.Pipelines.dll"
     },
     {
-      "hash": "sha256-4FFeyhKubx99USxJi7+0wMoYNKbj8vC1cQdUr2g5MV8=",
+      "hash": "sha256-ul85rHSaTMh1SC5pu1oMppS2cuzZYS3Z7IHhUPsrvIM=",
       "url": "_framework\/ProportionalRecalc.dll"
     },
     {
@@ -265,7 +265,7 @@
       "url": "_framework\/System.Private.CoreLib.dll"
     },
     {
-      "hash": "sha256-OzZ48ZqTn5Pt39\/i4FWIL4CB8S4HD8FLZO08nXEl5pM=",
+      "hash": "sha256-LQDNrMGAtov6Uiq+pIyNj2dlvDuxSobmmmx8uHPD0Uw=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -273,5 +273,5 @@
       "url": "_framework\/blazor.webassembly.js"
     }
   ],
-  "version": "XBxhlWjj"
+  "version": "gA8iT5Iz"
 };
