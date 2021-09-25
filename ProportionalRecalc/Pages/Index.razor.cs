@@ -35,5 +35,15 @@ namespace ProportionalRecalc.Pages
 		{
 			calculationData.Source.RemoveAt(index);
 		}
+
+		private void AddColumn(CalculationData calculationData)
+		{
+			CalculationService.AddCalculationDestination(calculationData);
+		}
+
+		private void RemoveColumn(CalculationData calculationData, CalculationDestinationData destinationData)
+		{
+			CalculationService.RemoveCalculationDestinationData(calculationData, destinationData);
+		}
 	}
 }

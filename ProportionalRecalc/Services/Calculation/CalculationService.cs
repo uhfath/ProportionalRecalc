@@ -33,7 +33,12 @@ namespace ProportionalRecalc.Services
 		public CalculationData AddCalculation()
 		{
 			var data = new CalculationData();
-			data.Source.Add(null);
+
+			for (var i = 0; i < 5; i++)
+			{
+				data.Source.Add(null);
+			}
+
 			data.Source.CollectionChanged += Source_CollectionChanged;
 
 			calculationDatas.Add(data);
@@ -44,6 +49,25 @@ namespace ProportionalRecalc.Services
 		{
 			calculationData.Source.CollectionChanged -= Source_CollectionChanged;
 			calculationDatas.Remove(calculationData);
+		}
+
+		public CalculationDestinationData AddCalculationDestination(CalculationData calculationData)
+		{
+			var destinationData = new CalculationDestinationData();
+
+			destinationData.TargetSum = calculationData.SourceSum;
+			foreach (var source in calculationData.Source)
+			{
+				destinationData.Values.Add(source);
+			}
+
+			calculationData.Destinations.Add(destinationData);
+			return destinationData;
+		}
+
+		public void RemoveCalculationDestinationData(CalculationData calculationData, CalculationDestinationData destinationData)
+		{
+			calculationData.Destinations.Remove(destinationData);
 		}
 	}
 }

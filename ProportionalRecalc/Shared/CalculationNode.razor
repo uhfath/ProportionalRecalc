@@ -16,6 +16,18 @@
 						<InputDecimal IsReadOnly="true" placeholder="Исходная сумма..." Value="Calculation.SourceSum" />
 					</th>
 
+					@for (var i = 0; i < Calculation.Destinations.Count; i++)
+					{
+						<th scope="col" class="align-top">
+							<div class="d-flex align-items-baseline">
+								<span>Результат@(Calculation.Destinations.Count == 1 ? "" : $" №{i + 1}")</span>
+								<button type="button" class="btn btn-link btn-sm" title="Скопировать новые результаты в буфер обмена"><i class="bi bi-files"></i></button>
+								<button type="button" @onclick="OnColumnDelete" class="btn btn-link link-danger btn-sm ms-auto" title="Удалить столбец"><i class="bi bi-trash-fill"></i></button>
+							</div>
+							<InputDecimal placeholder="Новая сумма..." Value="Calculation.Destinations[i].TargetSum" />
+						</th>
+					}
+
 					<th scope="col" class="align-bottom">
 						<button type="button" @onclick="OnColumnAdd" class="btn btn-outline-secondary btn-sm" title="Добавить новый столбец"><i class="bi bi-plus-lg"></i></button>
 					</th>
@@ -42,6 +54,16 @@
 										  OnRowInsertShortcut="() => OnRowInsert.InvokeAsync(currentIndex)"
 										  placeholder="Исходное значение..." />
 						</td>
+
+						@for (var j = 0; j < Calculation.Destinations.Count; j++)
+						{
+							<td scope="row" class="align-middle">
+								<InputDecimal Value="Calculation.Destinations[j].Values[i]"
+											  IsReadOnly="true"
+											  tabindex="-1"
+											  placeholder="Новое значение..." />
+							</td>
+						}
 
 						<td></td>
 					</tr>

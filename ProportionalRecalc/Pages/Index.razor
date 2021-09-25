@@ -16,6 +16,7 @@
 {
 	<CalculationNode Calculation="calculation"
 					 OnCalculationDelete="() => RemoveCalculation(calculation)"
+					 OnColumnAdd="() => AddColumn(calculation)"
 					 OnRowInsert="index => OnRowInsert(calculation, index)"
 					 OnRowRemove="index => OnRowRemove(calculation, index)" />
 }
