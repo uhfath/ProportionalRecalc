@@ -29,6 +29,7 @@
 		<div class="col-auto">
 			<CalculationNode Calculation="calculation"
 							 OnCalculationDelete="() => RemoveCalculation(calculation)"
+							 OnDestinationRecalculate="index => RecalculateDestination(calculation, index)"
 							 OnColumnAdd="index => AddColumn(calculation, index)"
 							 OnColumnRemove="index => RemoveColumn(calculation, index)"
 							 OnRowInsert="index => OnRowInsert(calculation, index)"

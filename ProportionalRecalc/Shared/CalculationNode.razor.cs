@@ -27,10 +27,19 @@ namespace ProportionalRecalc.Shared
 		[Parameter]
 		public EventCallback OnCalculationDelete { get; set; }
 
+		[Parameter]
+		public EventCallback<int> OnDestinationRecalculate { get; set; }
+
 		private void OnCellChanged(int index, decimal? value)
 		{
 			Calculation.Source[index] = value;
 			StateHasChanged();
+		}
+
+		private void OnTargetSumChanged(int index, decimal? value)
+		{
+			Calculation.Destinations[index].TargetSum = value;
+			OnDestinationRecalculate.InvokeAsync(index);
 		}
 	}
 }

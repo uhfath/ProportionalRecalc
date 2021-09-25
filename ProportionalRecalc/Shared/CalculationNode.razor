@@ -28,7 +28,7 @@
 							<button type="button" @onclick="() => OnColumnRemove.InvokeAsync(currentIndex)" class="btn btn-link link-danger btn-sm" title="Удалить столбец" tabindex="-1"><i class="bi bi-trash-fill"></i></button>
 						}
 					</div>
-					<InputDecimal placeholder="Новая сумма..." Value="Calculation.Destinations[i].TargetSum" />
+					<InputDecimal placeholder="Новая сумма..." Value="Calculation.Destinations[i].TargetSum" OnChanged="e => OnTargetSumChanged(currentIndex, e)" />
 				</th>
 			}
 		</tr>
